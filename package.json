@@ -1,6 +1,6 @@
 {
   "name": "translate-json",
-  "version": "2.2.0",
+  "version": "1.0.0",
   "description": "Tool to translate strings in a JSON document.",
   "main": "./translate-json",
   "scripts": {
@@ -22,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/LukeChannings/translate-json.git"
   },
-  "author": "Luke Channings",
+  "author": "Luke Channings ||Forked by Hobbica",
   "email": "luke@channings.me",
   "license": "MIT",
   "bugs": {
