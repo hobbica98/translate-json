@@ -16,7 +16,6 @@ jobs:
       - env:
           BING_API_KEY: ${{ secrets.BING_API_KEY }}
           YANDEX_API_KEY: ${{ secrets.YANDEX_API_KEY }}
-        run: npm test
 
   publish-npm:
     needs: build
