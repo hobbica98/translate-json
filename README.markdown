@@ -1,14 +1,6 @@
 translate-json
 =====
 
-<div style="text-align: center">
-
-[![npm version](https://badge.fury.io/js/translate-json.svg)](https://www.npmjs.com/package/translate-json)
-![Tests](https://github.com/LukeChannings/translate-json/workflows/Tests/badge.svg)
-[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-
-</div>
 
 Tool to translate strings in a JSON document.
 
@@ -19,8 +11,8 @@ Tool to translate strings in a JSON document.
 ## Usage
 
     Usage:
-      translate-json [options] -l <language> (- | <input>) [<output>]
-      translate-json [options] --lang=<language> (- | <input>) [<output>]
+      translate-json [options] -from <language> -to <language> (- | <input>) [<output>]
+      translate-json [options] --from=<language> --to=<language> (- | <input>) [<output>]
 
     Options:
       -t, --translator              The translation service to use: google (default), yandex, bing.
@@ -30,10 +22,11 @@ Tool to translate strings in a JSON document.
       -d, --dry-run                 Do not actually translate any values, prefix strings with 'zz_' to mark them.
       -h, --help                    Show this screen.
       -v, --version                 Show version.
+      -ff, --file-format            File formats supported JSON (default), js with export default (only one export per file) for i18n.
       --verbose                     Log more.
 
     Examples:
-      translate-json --lang=ru ./labels.json ./labels-ru.json
-      translate-json -d --lang=ru ./labels.json ./labels-ru.json
-      translate-json --preserve-html-entities --lang=ru ./labels.json ./labels-ru.json
-      cat input.json | translate-json -l ru - > output.json
+      translate-json --from=en --to=ru ./labels.json ./labels-ru.json
+      translate-json -d --from=en --to=ru ./labels.json ./labels-ru.json
+      translate-json --preserve-html-entities --from=en --to=ru ./labels.json ./labels-ru.json
+      cat input.json | translate-json --from en -to ru - > output.json
