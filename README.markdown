@@ -6,7 +6,7 @@ Tool to translate strings in a JSON document.
 
 ## Install
 
-    npm i -g translate-json
+    npm i -g @hobbica98/translate-json
 
 ## Usage
 
